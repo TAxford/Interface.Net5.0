@@ -10,5 +10,11 @@ namespace Interface.Net5._0
     {
         //property to store the duration of the tickets in hours
         public int DurationInHours { get; set; }
+
+        //simple constructor
+        public Ticket(int durationInHours) 
+        { 
+            DurationInHours = durationInHours;
+        }
     }
 }
