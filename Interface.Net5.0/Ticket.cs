@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interface.Net5._0
 {
-    internal class Ticket
+    internal class Ticket : IEquatable<Ticket>
     {
         //property to store the duration of the tickets in hours
         public int DurationInHours { get; set; }
@@ -15,6 +15,11 @@ namespace Interface.Net5._0
         public Ticket(int durationInHours) 
         { 
             DurationInHours = durationInHours;
+        }
+
+        public bool Equals(Ticket other)
+        {
+            return this.DurationInHours == other.DurationInHours;
         }
     }
 }
